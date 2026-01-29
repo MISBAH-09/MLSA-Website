@@ -9,6 +9,8 @@
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import StatsSection from "../components/StatsSection";
+import TeamSection from "../components/TeamSection";
+import WhyJoinSection from "../components/WhyJoinSection";
 import Footer from "../components/footer";
 // import mlsaLogo from '@/assets/mlsa-logo.png';
 
@@ -19,6 +21,8 @@ const Index = () => {
       <Navbar/>
       <HeroSection/>
       <StatsSection/>
+      <TeamSection/>
+      <WhyJoinSection/>
       {/* <Navbar logoUrl={mlsaLogo} />
       <HeroSection logoUrl={mlsaLogo} /> */}
       {/* <StatsSection />
