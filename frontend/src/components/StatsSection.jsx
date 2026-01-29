@@ -67,7 +67,7 @@ function AnimatedNumber({ value, suffix }) {
   );
 }
 
-export function StatsSection() {
+export default function StatsSection() {
   return (
     <section className="py-20 sm:py-28 bg-background">
       <div className="container mx-auto px-4">
