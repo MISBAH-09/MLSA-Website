@@ -8,6 +8,7 @@
 // import JoinSection from '@/components/JoinSection';
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
+import StatsSection from "../components/StatsSection";
 import Footer from "../components/footer";
 // import mlsaLogo from '@/assets/mlsa-logo.png';
 
@@ -17,6 +18,7 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Navbar/>
       <HeroSection/>
+      <StatsSection/>
       {/* <Navbar logoUrl={mlsaLogo} />
       <HeroSection logoUrl={mlsaLogo} /> */}
       {/* <StatsSection />
