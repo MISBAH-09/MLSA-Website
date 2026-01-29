@@ -42,7 +42,7 @@ const team = [
   },
 ];
 
-export function TeamSection() {
+export default function TeamSection() {
   return (
     <section className="py-20 sm:py-28 bg-muted/50">
       <div className="container mx-auto px-4">
