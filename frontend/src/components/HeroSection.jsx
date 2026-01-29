@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Users, Calendar, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export function HeroSection() {
+export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Animated Background */}
