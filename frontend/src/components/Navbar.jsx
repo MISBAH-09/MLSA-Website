@@ -40,7 +40,7 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? "bg-white/95 backdrop-blur-lg shadow-md py-3"
-            : "bg-transparent py-5"
+            : "bg-transparent py-5 text-white"
         }`}
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
@@ -51,10 +51,10 @@ export default function Navbar() {
               <span className="text-white font-bold text-lg">M</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-tight text-gray-900">
+              <span className="font-bold text-lg leading-tight ">
                 MLSA
               </span>
-              <span className="text-xs font-medium text-gray-500">
+              <span className="text-xs font-medium">
                 COMSATS Lahore
               </span>
             </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                     isActive
                       ? "text-blue-600 bg-blue-100"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                      : " hover:text-gray-900 hover:bg-gray-100"
                   }`}
                 >
                   {link.name}
@@ -82,13 +82,6 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              to="/login"
-              className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition"
-            >
-              Sign In
-            </Link>
-
             <Link
               to="/join"
               className="px-5 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition shadow"

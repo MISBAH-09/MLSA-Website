@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen bg-blue-900 flex items-center overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 gradient-hero animate-gradient opacity-90" />
       
@@ -100,7 +100,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto"
+            className="grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto mb-5"
           >
             {[
               { icon: Users, value: "50+", label: "Active Members" },
