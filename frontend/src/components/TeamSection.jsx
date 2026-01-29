@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const team = [
@@ -124,9 +123,13 @@ export default function TeamSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center"
         >
-          <Button variant="outline" size="lg" asChild>
-            <Link to="/team">View Full Team</Link>
-          </Button>
+          {/* Tailwind Button */}
+          <Link
+            to="/team"
+            className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          >
+            View Full Team
+          </Link>
         </motion.div>
       </div>
     </section>
