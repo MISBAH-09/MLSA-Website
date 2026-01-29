@@ -35,7 +35,7 @@ const perks = [
   "Career Mentorship Programs",
 ];
 
-export function WhyJoinSection() {
+export default function WhyJoinSection() {
   return (
     <section className="py-20 sm:py-28 bg-background relative overflow-hidden">
       {/* Background decoration */}
