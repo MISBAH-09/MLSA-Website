@@ -77,26 +77,22 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl transition-all group px-8"
-              asChild
+            {/* Become an Ambassador Button */}
+            <Link
+              to="/join"
+              className="inline-flex items-center justify-center bg-white text-primary font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all group"
             >
-              <Link to="/join">
-                Become an Ambassador
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
-              asChild
+              Become an Ambassador
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+            </Link>
+
+            {/* Explore Events Button */}
+            <Link
+              to="/events"
+              className="inline-flex items-center justify-center border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-bold py-3 px-8 rounded-lg transition-all"
             >
-              <Link to="/events">
-                Explore Events
-              </Link>
-            </Button>
+              Explore Events
+            </Link>
           </motion.div>
 
           {/* Quick Stats */}
@@ -110,7 +106,7 @@ export default function HeroSection() {
               { icon: Users, value: "50+", label: "Active Members" },
               { icon: Calendar, value: "30+", label: "Events Hosted" },
               { icon: BookOpen, value: "1000+", label: "Students Reached" },
-            ].map((stat, index) => (
+            ].map((stat) => (
               <div
                 key={stat.label}
                 className="flex flex-col items-center p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10"
