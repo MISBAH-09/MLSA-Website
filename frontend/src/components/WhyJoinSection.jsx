@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Award, Users, Briefcase, Rocket, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const benefits = [
@@ -81,9 +80,13 @@ export default function WhyJoinSection() {
               ))}
             </div>
 
-            <Button size="lg" className="gradient-accent text-accent-foreground shadow-lg hover:shadow-xl transition-all" asChild>
-              <Link to="/join">Apply Now</Link>
-            </Button>
+            {/* Plain Tailwind Button */}
+            <Link
+              to="/join"
+              className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+            >
+              Apply Now
+            </Link>
           </motion.div>
 
           {/* Right Content - Benefits Cards */}
