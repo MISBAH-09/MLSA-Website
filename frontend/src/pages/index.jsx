@@ -6,6 +6,7 @@
 // import GallerySection from '@/components/GallerySection';
 // import ContributorsSection from '@/components/ContributorsSection';
 // import JoinSection from '@/components/JoinSection';
+import Navbar from "../components/Navbar"
 import Footer from "../components/footer";
 // import mlsaLogo from '@/assets/mlsa-logo.png';
 
@@ -13,6 +14,7 @@ const Index = () => {
   // mlsaLogo = './vite.svg'
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <Navbar/>
       {/* <Navbar logoUrl={mlsaLogo} />
       <HeroSection logoUrl={mlsaLogo} /> */}
       {/* <StatsSection />

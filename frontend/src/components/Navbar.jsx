@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -15,7 +13,7 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-export function Navbar() {
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -34,71 +32,75 @@ export function Navbar() {
 
   return (
     <>
+      {/* Navbar */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-card/95 backdrop-blur-lg shadow-md py-3"
+            ? "bg-white/95 backdrop-blur-lg shadow-md py-3"
             : "bg-transparent py-5"
-        )}
+        }`}
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
+          
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl gradient-hero flex items-center justify-center shadow-glow">
-              <span className="text-primary-foreground font-display font-bold text-lg">M</span>
+          <Link to="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-md">
+              <span className="text-white font-bold text-lg">M</span>
             </div>
             <div className="flex flex-col">
-              <span className={cn(
-                "font-display font-bold text-lg leading-tight transition-colors",
-                isScrolled ? "text-foreground" : "text-foreground"
-              )}>
+              <span className="font-bold text-lg leading-tight text-gray-900">
                 MLSA
               </span>
-              <span className={cn(
-                "text-xs font-medium transition-colors",
-                isScrolled ? "text-muted-foreground" : "text-muted-foreground"
-              )}>
+              <span className="text-xs font-medium text-gray-500">
                 COMSATS Lahore
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={cn(
-                  "px-4 py-2 rounded-lg text-sm font-medium transition-all",
-                  location.pathname === link.href
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                )}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    isActive
+                      ? "text-blue-600 bg-blue-100"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
-          {/* CTA Button */}
+          {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm" asChild>
-              <Link to="/login">Sign In</Link>
-            </Button>
-            <Button className="gradient-accent text-accent-foreground shadow-md hover:shadow-lg transition-shadow" asChild>
-              <Link to="/join">Join MLSA</Link>
-            </Button>
+            <Link
+              to="/login"
+              className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition"
+            >
+              Sign In
+            </Link>
+
+            <Link
+              to="/join"
+              className="px-5 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition shadow"
+            >
+              Join MLSA
+            </Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -115,35 +117,44 @@ export function Navbar() {
             transition={{ duration: 0.2 }}
             className="fixed inset-x-0 top-[72px] z-40 lg:hidden"
           >
-            <div className="bg-card/98 backdrop-blur-xl shadow-lg border-b border-border mx-4 rounded-2xl overflow-hidden">
+            <div className="bg-white shadow-lg mx-4 rounded-2xl overflow-hidden">
               <nav className="flex flex-col p-4">
-                {navLinks.map((link, index) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
-                    <Link
-                      to={link.href}
-                      className={cn(
-                        "block px-4 py-3 rounded-lg text-base font-medium transition-all",
-                        location.pathname === link.href
-                          ? "text-primary bg-primary/10"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                      )}
+                {navLinks.map((link, index) => {
+                  const isActive = location.pathname === link.href;
+                  return (
+                    <motion.div
+                      key={link.name}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
                     >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                ))}
-                <div className="pt-4 mt-4 border-t border-border flex flex-col gap-2">
-                  <Button variant="outline" className="w-full" asChild>
-                    <Link to="/login">Sign In</Link>
-                  </Button>
-                  <Button className="w-full gradient-accent text-accent-foreground" asChild>
-                    <Link to="/join">Join MLSA</Link>
-                  </Button>
+                      <Link
+                        to={link.href}
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition ${
+                          isActive
+                            ? "text-blue-600 bg-blue-100"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+
+                <div className="pt-4 mt-4 border-t flex flex-col gap-2">
+                  <Link
+                    to="/login"
+                    className="w-full text-center px-4 py-2 rounded-lg border text-gray-700 hover:bg-gray-100 transition"
+                  >
+                    Sign In
+                  </Link>
+                  <Link
+                    to="/join"
+                    className="w-full text-center px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+                  >
+                    Join MLSA
+                  </Link>
                 </div>
               </nav>
             </div>
