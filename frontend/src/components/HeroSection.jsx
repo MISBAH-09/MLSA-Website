@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Users, Calendar, BookOpen } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export function HeroSection() {
