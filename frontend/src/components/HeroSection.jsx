@@ -45,7 +45,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8"
           >
-            <Sparkles size={16} />
+            <Sparkles  className="text-yellow-300"  size={16} />
             <span>Microsoft Learn Student Ambassadors</span>
           </motion.div>
 

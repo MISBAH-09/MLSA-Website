@@ -95,7 +95,7 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-6 sm:p-8 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
+              className="group p-6 sm:p-8 rounded-2xl bg-card border border-border hover:border-blue-900 hover:shadow-lg transition-all duration-500"
             >
               <div className="w-12 h-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:scale-110 transition-transform bg-primary">
                 <stat.icon size={24} className="text-primary-foreground" />
