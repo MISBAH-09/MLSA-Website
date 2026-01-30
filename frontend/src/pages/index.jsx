@@ -6,7 +6,6 @@
 // import GallerySection from '@/components/GallerySection';
 // import ContributorsSection from '@/components/ContributorsSection';
 // import JoinSection from '@/components/JoinSection';
-import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import StatsSection from "../components/StatsSection";
 import TeamSection from "../components/TeamSection";
@@ -18,7 +17,6 @@ const Index = () => {
   // mlsaLogo = './vite.svg'
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <Navbar/>
       <HeroSection/>
       <StatsSection/>
       <TeamSection/>
