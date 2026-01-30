@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Award, Users, Briefcase, Rocket, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
