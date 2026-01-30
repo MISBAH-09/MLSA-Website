@@ -1,26 +1,26 @@
-import { Instagram, Linkedin, Mail, Github, Heart } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Github, Heart, Facebook } from 'lucide-react';
 import logo from '../assets/logo.png'; // ✅ import the logo
 
 const Footer = () => {
   const quickLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#team', label: 'Team' },
-    { href: '#gallery', label: 'Gallery' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/team', label: 'Team' },
+    { href: '/gallery', label: 'Gallery' },
   ];
 
-  const resourceLinks = [
-    { href: '#', label: 'Microsoft Learn' },
-    { href: '#', label: 'Azure for Students' },
-    { href: '#', label: 'GitHub Student' },
-    { href: '#', label: 'VS Code' },
-  ];
+  // const resourceLinks = [
+  //   { href: '#', label: 'Microsoft Learn' },
+  //   { href: '#', label: 'Azure for Students' },
+  //   { href: '#', label: 'GitHub Student' },
+  //   { href: '#', label: 'VS Code' },
+  // ];
 
   const socialLinks = [
-    { icon: <Instagram size={20} />, href: '#', label: 'Instagram' },
-    { icon: <Linkedin size={20} />, href: '#', label: 'LinkedIn' },
-    { icon: <Github size={20} />, href: '#', label: 'GitHub' },
-    { icon: <Mail size={20} />, href: 'mailto:mlsa@cui.lahore', label: 'Email' },
+    { icon: <Instagram size={20} />, href: 'https://www.instagram.com/mlsa.cui.lahore', label: 'Instagram' },
+    { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/company/mlsa-cui-lahore/', label: 'LinkedIn' },
+    // { icon: <Github size={20} />, href: '#', label: 'GitHub' },
+    { icon: <Facebook size={20} />, href: '', label: 'https://www.facebook.com/profile.php?id=61573001279746&mibextid=ZbWKwL' },
   ];
 
   return (
@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <img
-                src={logo} // ✅ use imported logo
+                src={logo} 
                 alt="MLSA Logo"
                 className="h-12 w-auto brightness-0 invert"
               />
@@ -51,6 +51,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
+                  target='blank'
                   className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-sky-accent hover:border-sky-accent hover:text-white transition-all duration-300"
                 >
                   {social.icon}
@@ -76,7 +77,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Resources
           <div>
             <h4 className="text-white font-semibold mb-6">Resources</h4>
             <ul className="space-y-3">
@@ -91,7 +92,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div>
@@ -110,9 +111,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 pt-8">
+        <div className="border-t border-white pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/50 text-sm flex items-center gap-1">
+            <p className="text-white text-sm flex items-center gap-1">
               Made with <Heart size={14} className="text-gdg-red fill-gdg-red" /> by MLSA COMSATS Lahore
             </p>
 
