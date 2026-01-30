@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Users, Calendar, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
