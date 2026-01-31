@@ -28,7 +28,6 @@ const benefits = [
 
 const perks = [
   "Microsoft 365 Premium Access",
-  "Azure Credits for Projects",
   "LinkedIn Premium Subscription",
   "Exclusive Swag & Merchandise",
   "Global Networking Events",
@@ -51,10 +50,10 @@ export default function WhyJoinSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
-              <Rocket size={16} />
+              <Rocket size={18} />
               <span>Why Join Us</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-blue-900 leading-tight mb-6">
               Unlock Your Potential with{" "}
               <span className="gradient-text">MLSA</span>
             </h2>
@@ -82,12 +81,12 @@ export default function WhyJoinSection() {
             </div>
 
             {/* Plain Tailwind Button */}
-            <Link
+            {/* <Link
               to="/join"
               className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
             >
               Apply Now
-            </Link>
+            </Link> */}
           </motion.div>
 
           {/* Right Content - Benefits Cards */}
@@ -105,12 +104,12 @@ export default function WhyJoinSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
+                className="group p-6 rounded-2xl bg-card border-4 border-blue-900 hover:border-primary/20 hover:shadow-lg hover:scale-150 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <benefit.icon size={24} className="text-primary-foreground" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">{benefit.title}</h3>
+                <h3 className="font-semibold text-blue-900 mb-2">{benefit.title}</h3>
                 <p className="text-sm text-muted-foreground">{benefit.description}</p>
               </motion.div>
             ))}

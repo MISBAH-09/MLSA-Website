@@ -1,4 +1,5 @@
 import Footer from "../components/footer";
+import WhyJoinSection from "../components/WhyJoinSection";
 
 const About = () => {
   return (
@@ -10,6 +11,7 @@ const About = () => {
           collaborating on machine learning and AI projects. We run workshops, study groups, and events to help
           students grow technical and soft skills.
         </p>
+        <WhyJoinSection/>
       </main>
       <Footer />
     </div>
