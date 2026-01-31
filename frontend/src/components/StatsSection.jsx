@@ -95,14 +95,14 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-6 sm:p-8 rounded-2xl bg-card border border-border hover:border-blue-900 hover:shadow-lg transition-all duration-500"
+              className="group p-6 sm:p-8 hover:bg-blue-200 text-blue-900 rounded-2xl bg-card border-2 border-blue-900 hover:scale-125 hover:border-blue-900 hover:shadow-2xl transition-all duration-1000"
             >
-              <div className="w-12 h-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:scale-110 transition-transform bg-primary">
+              <div className="w-12 h-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:scale-125 transition-transform bg-primary">
                 <stat.icon size={24} className="text-primary-foreground" />
               </div>
               <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-              <h3 className="font-semibold text-foreground mt-2 mb-1">{stat.label}</h3>
-              <p className="text-sm text-muted-foreground">{stat.description}</p>
+              <h3 className="font-semibold text-black mt-2 mb-1">{stat.label}</h3>
+              <p className="text-sm text-black">{stat.description}</p>
             </motion.div>
           ))}
         </div>

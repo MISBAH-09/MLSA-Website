@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Mail, Github, Heart, Facebook } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Github,MapPin, Heart, Facebook } from 'lucide-react';
 import ContributorList from './ContributorList';
 import logo from '../images/mlsa_logo.png'; 
 
@@ -99,18 +99,32 @@ const Footer = () => {
             </ul>
           </div> */}
 
-          {/* Contact */}
+         {/* Contact */}
           <div>
             <h4 className="text-white font-semibold mb-6">Contact Us</h4>
-            <div className="space-y-3 text-white/60">
-              <p>COMSATS University Islamabad</p>
-              <p>Lahore Campus, Pakistan</p>
-              <a
-                href="mailto:mlsa@cui.lahore"
-                className="block hover:text-white transition-colors"
-              >
-                mlsa@cui.lahore
-              </a>
+
+            <div className="space-y-4 text-white/60 text-sm">
+              
+              {/* Location */}
+              <div className="flex items-start gap-3">
+                <MapPin size={18} className="text-white mt-0.5 flex-shrink-0" />
+                <div className='hover:text-white'>
+                  <p>COMSATS University Islamabad</p>
+                  <p>Lahore Campus, Pakistan</p>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center gap-3">
+                <Mail size={18} className="text-white flex-shrink-0" />
+                <a
+                  href="mailto:mlsa@cui.lahore"
+                  className="hover:text-white transition-colors"
+                >
+                  mlsa@cui.lahore
+                </a>
+              </div>
+
             </div>
           </div>
 
