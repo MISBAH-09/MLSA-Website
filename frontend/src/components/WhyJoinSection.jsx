@@ -30,13 +30,13 @@ const perks = [
   "Microsoft 365 Premium Access",
   "LinkedIn Premium Subscription",
   "Exclusive Swag & Merchandise",
-  "Global Networking Events",
+  "Networking Events",
   "Career Mentorship Programs",
 ];
 
 export default function WhyJoinSection() {
   return (
-    <section className="py-20 sm:py-28 bg-background relative overflow-hidden">
+    <section className="py-5 sm:py-28 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full gradient-hero opacity-5 rounded-l-[100px]" />
       
@@ -72,10 +72,10 @@ export default function WhyJoinSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 hover:text-blue-900"
                 >
                   <CheckCircle2 size={18} className="text-mlsa-green flex-shrink-0" />
-                  <span className="text-sm text-foreground">{perk}</span>
+                  <span className="text-sm text-foreground transition-transform duration-300 hover:scale-105">{perk}</span>
                 </motion.div>
               ))}
             </div>

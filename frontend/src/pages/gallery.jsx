@@ -52,12 +52,12 @@ export default function Gallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-600 text-sm font-medium mb-6">
-              <ImageIcon size={16} />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-blue-900 text-xl font-medium mb-6">
+              <ImageIcon size={18} />
               Gallery
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              Moments & <span className="text-blue-600">Memories</span>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-blue-900">
+              Moments & Memories
             </h1>
             <p className="text-gray-600 text-lg">
               A glimpse into our events, activities, and community.
@@ -75,8 +75,8 @@ export default function Gallery() {
             className={`px-6 py-2 rounded-full text-sm font-medium transition
               ${
                 activeTab === tab
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  ? "bg-blue-900 text-white"
+                  : "bg-gray-200 text-blue-900 hover:bg-gray-300"
               }`}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}

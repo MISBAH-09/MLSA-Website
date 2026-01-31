@@ -67,14 +67,14 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="py-20 sm:py-28 bg-muted/50">
+    <section className=" bg-muted/50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <div className="inline-flex items-center gap-2 px-4 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             <span>Meet the Team</span>
@@ -137,12 +137,12 @@ export default function TeamSection() {
           className="text-center"
         >
           {/* Tailwind Button */}
-          <Link
+          {/* <Link
             to="/team"
             className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
             View Full Team
-          </Link>
+          </Link> */}
         </motion.div>
       </div>
     </section>

@@ -79,7 +79,7 @@ export default function StatsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-blue-900 mb-4">
             Our Impact in Numbers
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
