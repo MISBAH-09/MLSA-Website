@@ -1,17 +1,8 @@
-// import Navbar from '@/components/Navbar';
-// import HeroSection from '@/components/HeroSection';
-// import StatsSection from '@/components/StatsSection';
-// import AboutSection from '@/components/AboutSection';
-// import TeamSection from '@/components/TeamSection';
-// import GallerySection from '@/components/GallerySection';
-// import ContributorsSection from '@/components/ContributorsSection';
-// import JoinSection from '@/components/JoinSection';
 import HeroSection from "../components/HeroSection";
 import StatsSection from "../components/StatsSection";
 import TeamSection from "../components/TeamSection";
 import WhyJoinSection from "../components/WhyJoinSection";
 import Footer from "../components/footer";
-// import mlsaLogo from '@/assets/mlsa-logo.png';
 
 const Index = () => {
   // mlsaLogo = './vite.svg'

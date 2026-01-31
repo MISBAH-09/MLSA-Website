@@ -1,5 +1,6 @@
 import { Instagram, Linkedin, Mail, Github, Heart, Facebook } from 'lucide-react';
-import logo from '../images/mlsa_logo.png'; // ✅ import the logo
+import ContributorList from './ContributorList';
+import logo from '../images/mlsa_logo.png'; 
 
 
 const Footer = () => {
@@ -112,6 +113,28 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
+
+
+          {/* Contributors */}
+          <div>
+            <h4 className="text-white font-semibold mb-6">
+              Contributors
+            </h4>
+
+            <ContributorList />
+
+            <a
+              href="https://github.com/MISBAH-09/MLSA-Website"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 mt-6 text-sm text-white/60 hover:text-white transition"
+            >
+              <Github size={16} />
+              View on GitHub
+            </a>
+          </div>
+
         </div>
 
         {/* Bottom */}

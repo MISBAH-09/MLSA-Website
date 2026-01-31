@@ -3,13 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from '../images/mlsa_logo.png'
 
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Events", href: "/events" },
   { name: "Team", href: "/team" },
-  { name: "Resources", href: "/resources" },
+  // { name: "Resources", href: "/resources" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
 ];
@@ -66,8 +67,8 @@ export default function Navbar() {
           
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-lg">M</span>
+            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md">
+              <img src={logo} alt="logo" />
             </div>
             <div className="flex flex-col">
               <span className={`font-bold text-lg leading-tight ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
