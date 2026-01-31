@@ -21,8 +21,9 @@ const events = [
   //   venue: "Main Auditorium",
   //   status: "upcoming",
   // },
-   {
-    id: 3,
+
+  {
+    id: 1,
     title: "Annual Dinner (CS Dept.)",
     description: "Interact and Connect",
     date: "Dec 12, 2024",
@@ -31,7 +32,7 @@ const events = [
     status: "past",
   },
   {
-    id: 4,
+    id: 2,
     title: "Alumni Dinner",
     description: "Interaction with Alumni",
     date: "Nov 21, 2025",
@@ -39,6 +40,52 @@ const events = [
     venue: "FootBall Ground",
     status: "past",
   },
+  {
+    id: 3,
+    title: "Exploring the Benefits of Microsoft with Malaika Mujahid",
+    description: "An interactive alumni session highlighting the benefits of Microsoft tools and career opportunities.",
+    date: "Fall 2025",
+    // time: "05:30 PM - 08:30 PM",
+    venue: " ",
+    status: "past",
+  },
+  {
+    id: 4,
+    title: "Webinar: Career Consultation & Industry Trends",
+    description: "A webinar focused on career guidance and emerging industry trends.",
+    date: "Fall 2025",
+    // time: "05:30 PM - 08:30 PM",
+    venue: " ",
+    status: "past",
+  },
+  {
+    id: 5,
+    title: "A Practical Guide to Fiverr & Upwork",
+    description: "An in-person session covering profile creation, client acquisition, and earning through Fiverr and Upwork.",
+    date: "Fall 2025",
+    // time: "05:30 PM - 08:30 PM",
+    venue: " ",
+    status: "past",
+  },
+  {
+    id: 6,
+    title: "Online Webinar: Video Editing Essentials",
+    description: "An online webinar covering the fundamentals of video editing, tools, and industry best practices.",
+    date: "Fall 2025",
+    // time: "05:30 PM - 08:30 PM",
+    venue: "Online (Zoom)",
+    status: "past",
+  },
+  {
+    id: 7,
+    title: "Online Session: C++ & Machine Learning",
+    description: "An online session introducing C++ programming concepts and an overview of Machine Learning fundamentals, with practical examples.",
+    date: "Fall 2025",
+    // time: "05:30 PM – 07:30 PM",
+    venue: "Online (Zoom)",
+    status: "past",
+  }
+  
 ];
 
 export default function Events() {
@@ -131,3 +178,4 @@ export default function Events() {
     </>
   );
 }
+
