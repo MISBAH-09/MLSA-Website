@@ -39,7 +39,7 @@ const team = [
     name: "Mateen Waqar ",
     role: "Strategist",
     image: Strategist,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/mateen-waqar-4a325a330?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 5,
