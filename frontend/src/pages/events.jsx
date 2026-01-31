@@ -2,7 +2,8 @@ import Footer from "../components/footer";
 
 const Events = () => {
   return (
-    <div className="min-h-screen pt-24">
+    <>
+    <div className="min-h-screen pl-5 pr-5 pt-24">
       <main className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-6">Events</h1>
         <p className="text-gray-700 mb-4">We run regular workshops, hackathons, and speaker sessions. Stay tuned for upcoming events.</p>
@@ -18,8 +19,9 @@ const Events = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
+     <Footer />
+     </>
   );
 };
 

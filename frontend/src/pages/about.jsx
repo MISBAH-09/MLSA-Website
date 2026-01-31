@@ -3,7 +3,8 @@ import WhyJoinSection from "../components/WhyJoinSection";
 
 const About = () => {
   return (
-    <div className="min-h-screen pt-24">
+    <>
+    <div className="min-h-screen ml-5 pl-5 pr-5 pt-24">
       <main className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-blue-900 mb-4">About MLSA</h1>
         <p className="text-gray-700 leading-relaxed">
@@ -13,8 +14,9 @@ const About = () => {
         </p>
         <WhyJoinSection/>
       </main>
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
 };
 

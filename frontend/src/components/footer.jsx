@@ -130,7 +130,9 @@ const Footer = () => {
               rel="noreferrer"
               className="inline-flex items-center gap-2 mt-6 text-sm text-white/60 hover:text-white transition"
             >
-              <Github size={16} />
+              <Github size={16} 
+              className='text-white/70 hover:text-white transition-all duration-300'
+              />
               View on GitHub
             </a>
           </div>
