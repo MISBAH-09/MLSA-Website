@@ -2,13 +2,13 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
-import President from '../images/HamzaPresident.png'; 
-import VicePresident from '../images/VicePresident.jpeg';
-import TechDirector from '../images/TechDirector.jpeg';
-import HeadofDirectors from '../images/HeadofDirectors.jpeg';
-import Strategist from '../images/Strategist.jpeg';
-import EventDirector from '../images/EventDirector.jpeg';
-import MarketingDirector from '../images/MarketingDirector.jpg'
+import President from '../images/team/HamzaPresident.png'; 
+import VicePresident from '../images/team/VicePresident.jpeg';
+import TechDirector from '../images/team/TechDirector.jpeg';
+import HeadofDirectors from '../images/team/HeadofDirectors.jpeg';
+import Strategist from '../images/team/Strategist.jpeg';
+import EventDirector from '../images/team/EventDirector.jpeg';
+import MarketingDirector from '../images/team/MarketingDirector.jpg'
 
 
 
@@ -76,10 +76,10 @@ export default function TeamSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             <span>Meet the Team</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-blue-900 mb-4">
             The Minds Behind <span className="gradient-text">MLSA COMSATS</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
