@@ -50,7 +50,7 @@ export default function Events() {
 
   return (
     <>
-    <div className="min-h-screen pt-24 px-5 bg-gray-50">
+    <div className="min-h-screen pt-24 px-5 bg-gray-50 mb-5 pb-5">
       <main className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -82,11 +82,11 @@ export default function Events() {
         </div>
 
         {/* Events Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
           {filteredEvents.map((event) => (
             <div
               key={event.id}
-              className="bg-white border rounded-xl p-6 hover:shadow-lg transition"
+              className="bg-white border-2 border-blue-900 rounded-xl p-6 hover:shadow-lg transition"
             >
               <h2 className="text-xl font-semibold text-blue-900 mb-2">
                 {event.title}
