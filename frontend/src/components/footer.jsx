@@ -1,5 +1,6 @@
 import { Instagram, Linkedin, Mail, Github, Heart, Facebook } from 'lucide-react';
-import logo from '../assets/logo.png'; // ✅ import the logo
+import logo from '../images/mlsa_logo.png'; // ✅ import the logo
+
 
 const Footer = () => {
   const quickLinks = [
@@ -33,7 +34,7 @@ const Footer = () => {
               <img
                 src={logo} 
                 alt="MLSA Logo"
-                className="h-12 w-auto brightness-0 invert"
+                className="h-10 w-auto object-contain bg-white"
               />
               <span className="text-xl font-bold text-white">
                 MLSA COMSATS

@@ -2,43 +2,66 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+import President from '../images/HamzaPresident.png'; 
+import VicePresident from '../images/VicePresident.jpeg';
+import TechDirector from '../images/TechDirector.jpeg';
+import HeadofDirectors from '../images/HeadofDirectors.jpeg';
+import Strategist from '../images/Strategist.jpeg';
+import EventDirector from '../images/EventDirector.jpeg';
+import MarketingDirector from '../images/MarketingDirector.jpg'
+
+
 
 const team = [
   {
     id: 1,
-    name: "Ahmad Hassan",
+    name: "Hamza Afzal",
     role: "President",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop",
-    linkedin: "#",
-    github: "#",
-    twitter: "#",
+    image: President,
+    linkedin: "https://www.linkedin.com/in/muhammad-hamza-afzal/",
   },
   {
     id: 2,
-    name: "Fatima Khan",
+    name: "Muhammad Qasim Ali",
     role: "Vice President",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop",
-    linkedin: "#",
-    github: "#",
-    twitter: "#",
+    image: VicePresident,
+    linkedin: "https://www.linkedin.com/in/muhammad-qasim-ali-tareen-6042b4288/",
   },
-  {
+   {
     id: 3,
-    name: "Ali Raza",
-    role: "Technical Lead",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop",
+    name: "Elaaf Massod",
+    role: "Head of Directors",
+    image: HeadofDirectors ,
+    linkedin: "https://www.linkedin.com/in/eelaf-masood-2817a7333/",
+  },
+   {
+    id: 4,
+    name: "Mateen Waqar ",
+    role: "Strategist",
+    image: Strategist,
     linkedin: "#",
-    github: "#",
-    twitter: "#",
   },
   {
-    id: 4,
-    name: "Sara Ahmed",
-    role: "Events Coordinator",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop",
-    linkedin: "#",
-    github: "#",
-    twitter: "#",
+    id: 5,
+    name: "Yar Muhammad Uwaim",
+    role: "Tech Director",
+    image: TechDirector,
+    linkedin: "https://www.linkedin.com/in/yarmuhammadawaim/",
+
+  },
+   {
+    id: 6,
+    name: "Adeel Azhar",
+    role: "Event Director",
+    image: EventDirector,
+    linkedin: "https://www.linkedin.com/in/muhammad-adeel-azhar-140712328/",
+  },
+   {
+    id: 7,
+    name: "Sundas Abid",
+    role: "Marketing Director",
+    image: MarketingDirector,
+    linkedin: "https://www.linkedin.com/in/sundasabid/",
   },
 ];
 
@@ -83,25 +106,14 @@ export default function TeamSection() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-20">
                     <div className="flex gap-3">
                       <a
                         href={member.linkedin}
+                        target="blank"
                         className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                       >
                         <Linkedin size={18} />
-                      </a>
-                      <a
-                        href={member.github}
-                        className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        <Github size={18} />
-                      </a>
-                      <a
-                        href={member.twitter}
-                        className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        <Twitter size={18} />
                       </a>
                     </div>
                   </div>
