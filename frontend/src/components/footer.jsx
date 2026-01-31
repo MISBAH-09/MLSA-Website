@@ -20,8 +20,11 @@ const Footer = () => {
   const socialLinks = [
     { icon: <Instagram size={20} />, href: 'https://www.instagram.com/mlsa.cui.lahore', label: 'Instagram' },
     { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/company/mlsa-cui-lahore/', label: 'LinkedIn' },
-    // { icon: <Github size={20} />, href: '#', label: 'GitHub' },
-    { icon: <Facebook size={20} />, href: '', label: 'https://www.facebook.com/profile.php?id=61573001279746&mibextid=ZbWKwL' },
+    { 
+      icon: <Facebook size={20} />, 
+      href: 'https://www.facebook.com/profile.php?id=61573001279746&sfnsn=scwspwa&mibextid=RUbZ1f', 
+      label: 'Facebook' 
+    },
   ];
 
   return (

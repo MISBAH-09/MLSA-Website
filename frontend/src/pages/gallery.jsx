@@ -2,19 +2,29 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
 
+import interactive1 from "../images/gallery/InteractiveSession.jpeg";
+import interactive2 from "../images/gallery/InteractiveSessions.jpeg";
+import sessionImg from "../images/gallery/Session.jpeg";
+import basketball from "../images/gallery/BasketballSession.jpeg";
+import orient1 from "../images/gallery/1stOrientation.jpeg";
+import orient2 from "../images/gallery/2ndOrientation.jpeg";
+import orientFall from "../images/gallery/OrientationFall25.jpeg";
+import dinner from "../images/gallery/AnnualDinner.jpeg";
+import dinnerPromo from "../images/gallery/AnnualDinnerPromotion.jpeg";
+
 const galleries = {
   events: [
-    { id: 1, src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop", caption: "Hackathon 2023" },
-    { id: 2, src: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&auto=format&fit=crop", caption: "Azure Workshop" },
-    { id: 3, src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&auto=format&fit=crop", caption: "Tech Talk Session" },
-    { id: 4, src: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&auto=format&fit=crop", caption: "Networking Event" },
-    { id: 5, src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&auto=format&fit=crop", caption: "Graduation Ceremony" },
-    { id: 6, src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop", caption: "Workshop Session" },
+    { id: 1, src: orient1, caption: "1st Orientation" },
+    { id: 2, src: orient2, caption: "2nd Orientation" },
+    { id: 3, src: orientFall, caption: "Orientation Fall 25" },
+    { id: 4, src: dinner, caption: "Annual Dinner" },
+    { id: 5, src: dinnerPromo, caption: "Annual Dinner Promotion" },
+    { id: 6, src: sessionImg, caption: "Session" },
   ],
   team: [
-    { id: 7, src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop", caption: "Team Meeting" },
-    { id: 8, src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&auto=format&fit=crop", caption: "Team Outing" },
-    { id: 9, src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop", caption: "Planning Session" },
+    { id: 7, src: interactive1, caption: "Interactive Session" },
+    { id: 8, src: interactive2, caption: "Interactive Sessions" },
+    { id: 9, src: basketball, caption: "Basketball Session" },
   ],
 };
 
@@ -44,7 +54,7 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="pt-28 pb-16 bg-gradient-to-b from-gray-100 to-white">
         <div className="max-w-3xl mx-auto text-center px-4">
           <motion.div
@@ -72,7 +82,7 @@ export default function Gallery() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-6 py-2 rounded-full text-sm font-medium transition
+            className={`px-8 py-2 rounded-full text-sm font-medium transition
               ${
                 activeTab === tab
                   ? "bg-blue-900 text-white"
@@ -93,7 +103,7 @@ export default function Gallery() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="relative aspect-square overflow-hidden rounded-2xl cursor-pointer group"
+              className="relative aspect-square overflow-hidden rounded-2xl cursor-pointer group shadow-sm"
               onClick={() => openLightbox(image, index)}
             >
               <img
