@@ -72,8 +72,8 @@ export default function Events() {
               className={`px-6 py-2 rounded-full text-sm font-medium transition
                 ${
                   filter === tab
-                    ? "bg-blue-600 text-white"
-                    : "bg-white border text-gray-600 hover:bg-gray-100"
+                    ? "bg-blue-900 text-white border-2 border-blue-900"
+                    : "bg-white border text-blue-900 hover:bg-gray-100 border-2 border-blue-900"
                 }`}
             >
               {tab === "upcoming" ? "Upcoming Events" : "Past Events"}
@@ -121,9 +121,9 @@ export default function Events() {
         </div>
 
         {filteredEvents.length === 0 && (
-          <p className="text-center text-gray-500 mt-12">
-            Coming Soon.
-          </p>
+            <p className="text-center text-lg text-blue-900 m-12 ">
+              Coming Soon.
+            </p>
         )}
       </main>
     </div>
