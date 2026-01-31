@@ -14,8 +14,8 @@ import dinnerPromo from "../images/gallery/AnnualDinnerPromotion.jpeg";
 
 const galleries = {
   events: [
-    { id: 1, src: orient1, caption: "1st Orientation" },
-    { id: 2, src: orient2, caption: "2nd Orientation" },
+    { id: 1, src: orient1, caption: "Spring Orientation" },
+    { id: 2, src: orient2, caption: "Fall Orientation" },
     { id: 3, src: orientFall, caption: "Orientation Fall 25" },
     { id: 4, src: dinner, caption: "Annual Dinner" },
     { id: 5, src: dinnerPromo, caption: "Annual Dinner Promotion" },
