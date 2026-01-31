@@ -67,7 +67,8 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className=" bg-muted/50">
+    //<section className=" bg-muted/50">
+    <section className="bg-muted/50 pt-24 sm:pt-28">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
