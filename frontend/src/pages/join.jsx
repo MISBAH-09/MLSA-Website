@@ -2,7 +2,7 @@ import { useState } from "react";
 import Footer from "../components/footer";
 
 // Replace this with your actual Google Form URL (viewform link)
-const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform";
+const GOOGLE_FORM_URL = "https://forms.gle/N9L96X8waAEFEcrx7";
 
 const Join = () => {
   const [form, setForm] = useState({ name: "", email: "", university: "", message: "" });
