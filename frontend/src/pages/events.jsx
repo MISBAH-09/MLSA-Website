@@ -27,7 +27,6 @@ const events = [
     title: "Annual Dinner (CS Dept.)",
     description: "Interact and Connect",
     date: "Dec 12, 2024",
-    time: "05:30 PM - 08:30 PM",
     venue: "FootBall Ground",
     status: "past",
   },
@@ -142,10 +141,7 @@ export default function Events() {
                   <Calendar size={14} />
                   <span>{event.date}</span>
                 </div>
-               // <div className="flex items-center gap-2">
-               //   <Clock size={14} />
-               //   <span>{event.time}</span>
-               // </div>
+               
                 <div className="flex items-center gap-2">
                   <MapPin size={14} />
                   <span>{event.venue}</span>
@@ -172,5 +168,6 @@ export default function Events() {
     </>
   );
 }
+
 
 
