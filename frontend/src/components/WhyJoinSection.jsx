@@ -27,8 +27,8 @@ const benefits = [
 ];
 
 const perks = [
-  "Microsoft 365 Premium Access",
-  "LinkedIn Premium Subscription",
+  "Microsoft 365 Premium Access*",
+  "LinkedIn Premium Subscription*",
   "Exclusive Swag & Merchandise",
   "Networking Events",
   "Career Mentorship Programs",
@@ -79,6 +79,11 @@ export default function WhyJoinSection() {
                 </motion.div>
               ))}
             </div>
+
+            <p className="text-xs text-muted-foreground italic leading-relaxed max-w-lg">
+            * Premium benefits (such as Microsoft 365
+            or LinkedIn Premium) are provided only to active students and are subject to availability.
+            </p>
 
             {/* Plain Tailwind Button */}
             {/* <Link
