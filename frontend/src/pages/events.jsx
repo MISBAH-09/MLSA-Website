@@ -36,7 +36,6 @@ const events = [
     title: "Alumni Dinner",
     description: "Interaction with Alumni",
     date: "Nov 21, 2025",
-    time: "05:30 PM - 08:30 PM",
     venue: "FootBall Ground",
     status: "past",
   },
@@ -44,45 +43,40 @@ const events = [
     id: 3,
     title: "Exploring the Benefits of Microsoft with Malaika Mujahid",
     description: "An interactive alumni session highlighting the benefits of Microsoft tools and career opportunities.",
-    date: "Fall 2025",
-    // time: "05:30 PM - 08:30 PM",
-    venue: " ",
+    date: "Oct 11, 2025",
+    venue: "Auditorium",
     status: "past",
   },
   {
     id: 4,
     title: "Webinar: Career Consultation & Industry Trends",
     description: "A webinar focused on career guidance and emerging industry trends.",
-    date: "Fall 2025",
-    // time: "05:30 PM - 08:30 PM",
-    venue: " ",
+    date: "Sept 27, 2025",
+    venue: "Auditorium",
     status: "past",
   },
   {
     id: 5,
     title: "A Practical Guide to Fiverr & Upwork",
     description: "An in-person session covering profile creation, client acquisition, and earning through Fiverr and Upwork.",
-    date: "Fall 2025",
-    // time: "05:30 PM - 08:30 PM",
-    venue: " ",
+    date: "Aug 19, 2025",
+    venue: " Auditorium",
     status: "past",
   },
   {
     id: 6,
     title: "Online Webinar: Video Editing Essentials",
     description: "An online webinar covering the fundamentals of video editing, tools, and industry best practices.",
-    date: "Fall 2025",
-    // time: "05:30 PM - 08:30 PM",
-    venue: "Online (Zoom)",
+    date: "Sept 14,2025",
+    venue: "Zoom",
     status: "past",
   },
   {
     id: 7,
     title: "Online Session: C++ & Machine Learning",
     description: "An online session introducing C++ programming concepts and an overview of Machine Learning fundamentals, with practical examples.",
-    date: "Fall 2025",
-    // time: "05:30 PM – 07:30 PM",
-    venue: "Online (Zoom)",
+    date: "Weekly Sessions | Fall 2025",
+    venue: "Zoom",
     status: "past",
   }
   
@@ -148,10 +142,10 @@ export default function Events() {
                   <Calendar size={14} />
                   <span>{event.date}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Clock size={14} />
-                  <span>{event.time}</span>
-                </div>
+               // <div className="flex items-center gap-2">
+               //   <Clock size={14} />
+               //   <span>{event.time}</span>
+               // </div>
                 <div className="flex items-center gap-2">
                   <MapPin size={14} />
                   <span>{event.venue}</span>
@@ -178,4 +172,5 @@ export default function Events() {
     </>
   );
 }
+
 
