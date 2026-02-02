@@ -1,61 +1,50 @@
-import { useState } from "react";
+import { motion } from "framer-motion";
 import Footer from "../components/footer";
 
-// Replace this with your actual Google Form URL (viewform link)
+// Your Google Form URL
 const GOOGLE_FORM_URL = "https://forms.gle/N9L96X8waAEFEcrx7";
 
 const Join = () => {
-  const [form, setForm] = useState({ name: "", email: "", university: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Open the Google Form in a new tab. If you prefer direct programmatic submission, replace
-    // this logic with POST to the formResponse endpoint and set the correct entry.<id> names.
+  const handleOpenForm = () => {
     window.open(GOOGLE_FORM_URL, "_blank");
-    setSubmitted(true);
   };
 
   return (
-    <div className="min-h-screen pt-24">
-      <main className="container mx-auto px-4 py-16 max-w-3xl">
-        <h1 className="text-4xl font-bold mb-6">Join MLSA</h1>
-        <p className="text-gray-700 mb-6">Become a member to get access to workshops, mentorship, and community projects.</p>
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      {/* Main Content Area */}
+      <main className="flex-grow flex items-center justify-center pt-24 pb-16 px-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl w-full text-center"
+        >
+          {/* Main Heading */}
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Join MLSA
+          </h1>
 
-        <div className="bg-white shadow-sm rounded-lg p-6">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Name</label>
-              <input name="name" value={form.name} onChange={handleChange} required className="mt-1 block w-full border rounded-md p-2" />
-            </div>
+          {/* Subtext */}
+          <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+            Ready to become a Microsoft Learn Student Ambassador?
+          </p>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Email</label>
-              <input name="email" type="email" value={form.email} onChange={handleChange} required className="mt-1 block w-full border rounded-md p-2" />
-            </div>
+          {/* Centered Button matching your screenshot */}
+          <button
+            onClick={handleOpenForm}
+            className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95"
+          >
+            Open Application Form
+          </button>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700">University / Department</label>
-              <input name="university" value={form.university} onChange={handleChange} className="mt-1 block w-full border rounded-md p-2" />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Message (optional)</label>
-              <textarea name="message" value={form.message} onChange={handleChange} rows={4} className="mt-1 block w-full border rounded-md p-2" />
-            </div>
-
-            <div className="flex gap-3 items-center">
-              <button type="submit" className="px-6 py-3 bg-blue-600 text-white rounded-md">Submit & Open Google Form</button>
-              <a href={GOOGLE_FORM_URL} target="_blank" rel="noreferrer" className="px-4 py-2 border rounded-md text-blue-600">Open Google Form</a>
-              {submitted && <span className="text-sm text-green-600">Thanks — the Google Form has been opened in a new tab.</span>}
-            </div>
-
-            <p className="text-xs text-gray-500">Note: Replace the placeholder Google Form URL at the top of this file with your form's link. To auto-fill fields in the Google Form on submit, we need the form's entry IDs (e.g. entry.123456). I can wire that up if you paste your form URL.</p>
-          </form>
-        </div>
+          {/* Note matching your screenshot */}
+          <p className="mt-8 text-sm text-gray-500 italic">
+            * You will be redirected to Google Forms in a new tab.
+          </p>
+        </motion.div>
       </main>
+
+      {/* Footer at the bottom */}
       <Footer />
     </div>
   );
