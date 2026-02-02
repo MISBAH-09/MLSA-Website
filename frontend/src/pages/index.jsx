@@ -3,7 +3,7 @@ import StatsSection from "../components/StatsSection";
 import TeamSection from "../components/TeamSection";
 import WhyJoinSection from "../components/WhyJoinSection";
 import Footer from "../components/footer";
-
+import logo from '../images/mlsa.png';
 const Index = () => {
   // mlsaLogo = './vite.svg'
   return (

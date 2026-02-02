@@ -1,7 +1,6 @@
-import { Instagram, Linkedin, Mail, Github,MapPin, Heart, Facebook } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Github, MapPin, Heart, Facebook } from 'lucide-react';
 import ContributorList from './ContributorList';
 import logo from '../images/mlsa_logo.png'; 
-
 
 const Footer = () => {
   const quickLinks = [
@@ -10,13 +9,6 @@ const Footer = () => {
     { href: '/team', label: 'Team' },
     { href: '/gallery', label: 'Gallery' },
   ];
-
-  // const resourceLinks = [
-  //   { href: '#', label: 'Microsoft Learn' },
-  //   { href: '#', label: 'Azure for Students' },
-  //   { href: '#', label: 'GitHub Student' },
-  //   { href: '#', label: 'VS Code' },
-  // ];
 
   const socialLinks = [
     { icon: <Instagram size={20} />, href: 'https://www.instagram.com/mlsa.cui.lahore', label: 'Instagram' },
@@ -56,7 +48,8 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  target='blank'
+                  target='_blank'
+                  rel="noreferrer"
                   className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-sky-accent hover:border-sky-accent hover:text-white transition-all duration-300"
                 >
                   {social.icon}
@@ -82,24 +75,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources
-          <div>
-            <h4 className="text-white font-semibold mb-6">Resources</h4>
-            <ul className="space-y-3">
-              {resourceLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-white/60 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div> */}
-
-         {/* Contact */}
+          {/* Contact */}
           <div>
             <h4 className="text-white font-semibold mb-6">Contact Us</h4>
 
@@ -114,21 +90,19 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Email */}
+              {/* Email  */}
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-white flex-shrink-0" />
                 <a
-                  href="mailto:mlsa@cui.lahore"
+                  href="mailto:mlsa.cui.lahore@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  mlsa@cui.lahore
+                  mlsa.cui.lahore@gmail.com
                 </a>
               </div>
 
             </div>
           </div>
-
-
 
           {/* Contributors */}
           <div>
@@ -153,28 +127,28 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-white pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white text-sm flex items-center gap-1">
-              Made with <Heart size={14} className="text-gdg-red fill-gdg-red" /> by MLSA COMSATS Lahore
-            </p>
+       {/* Bottom */}
+<div className="border-t border-white pt-8">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+    <p className="text-white text-sm flex items-center gap-1">
+      Made with <Heart size={14} /> by MLSA COMSATS Lahore
+    </p>
 
-            <p className="text-white/50 text-sm flex items-center gap-2">
-              © {new Date().getFullYear()} • Powered by
-              <span className="font-semibold text-white flex items-center gap-1">
-                <svg
-                  className="w-4 h-4"
-                  viewBox="0 0 23 23"
-                  fill="currentColor"
-                >
-                  <path d="M0 0h11v11H0zM12 0h11v11H12zM0 12h11v11H0zM12 12h11v11H12z" />
-                </svg>
-                Microsoft
-              </span>
-            </p>
-          </div>
-        </div>
+    <p className="text-white/50 text-sm flex items-center gap-2">
+      © {new Date().getFullYear()} • Powered by
+      <span className="font-semibold text-white flex items-center gap-1">
+        <svg
+          className="w-4 h-4"
+          viewBox="0 0 23 23"
+          fill="currentColor"
+        >
+          <path d="M0 0h11v11H0zM12 0h11v11H12zM0 12h11v11H0zM12 12h11v11H12z" />
+        </svg>
+        Microsoft
+      </span>
+    </p>
+  </div>
+</div>
       </div>
     </footer>
   );
