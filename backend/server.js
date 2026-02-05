@@ -12,7 +12,6 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
-    // IMPORTANT: Ensure this is the 16-digit App Password WITHOUT spaces
     pass: process.env.EMAIL_PASS, 
   },
 });
@@ -21,16 +20,12 @@ app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {
-    // 2. The "From" formatting to help identify the sender in the inbox list
     from: `"${name} (MLSA Web)" <${process.env.EMAIL_USER}>`, 
     
-    // 3. The destination (Your MLSA Gmail)
     to: 'mlsa.cui.lhr@gmail.com',
     
-    // ✅ 4. THE FIX: Forces Gmail's 'Reply' button to address the student's email
     replyTo: `${name} <${email}>`, 
     
-    // 5. Subject line updated to immediately show who is reaching out
     subject: `[MLSA Inquiry] From: ${name}`,
     
     html: `
@@ -49,7 +44,7 @@ app.post('/send-email', (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      // Logs the error to your terminal so you can see if it's still an EAUTH issue
+
       console.error("Mail Error:", error);
       return res.status(500).send(error.toString());
     }
@@ -59,4 +54,4 @@ app.post('/send-email', (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
