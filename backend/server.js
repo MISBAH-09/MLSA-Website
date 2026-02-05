@@ -7,28 +7,56 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// 1. Gmail Transporter Configuration
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    // IMPORTANT: Ensure this is the 16-digit App Password WITHOUT spaces
+    pass: process.env.EMAIL_PASS, 
   },
 });
 
 app.post('/send-email', (req, res) => {
-  const { name, email, university, message } = req.body;
+  const { name, email, message } = req.body;
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: 'mlsa.cui.lahore@gmail.com', // The official MLSA email
-    subject: `New MLSA Inquiry from ${name}`,
-    html: `<h1>New Message</h1><p><strong>Name:</strong> ${name}</p><p><strong>Message:</strong> ${message}</p>` // Your HTML Template goes here
+    // 2. The "From" formatting to help identify the sender in the inbox list
+    from: `"${name} (MLSA Web)" <${process.env.EMAIL_USER}>`, 
+    
+    // 3. The destination (Your MLSA Gmail)
+    to: 'mlsa.cui.lhr@gmail.com',
+    
+    // ✅ 4. THE FIX: Forces Gmail's 'Reply' button to address the student's email
+    replyTo: `${name} <${email}>`, 
+    
+    // 5. Subject line updated to immediately show who is reaching out
+    subject: `[MLSA Inquiry] From: ${name}`,
+    
+    html: `
+      <div style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #0078d4; border-radius: 10px;">
+        <h2 style="color: #0078d4;">New Website Inquiry</h2>
+        <p><strong>Student Name:</strong> ${name}</p>
+        <p><strong>Student Email:</strong> ${email}</p>
+        <hr style="border: 0; border-top: 1px solid #eee;" />
+        <p><strong>Message:</strong></p>
+        <p style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; white-space: pre-wrap;">${message}</p>
+        <br />
+        <p style="font-size: 12px; color: #777;">Tip: Simply hit "Reply" in Gmail to respond to this student.</p>
+      </div>
+    `
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
-    if (error) return res.status(500).send(error.toString());
+    if (error) {
+      // Logs the error to your terminal so you can see if it's still an EAUTH issue
+      console.error("Mail Error:", error);
+      return res.status(500).send(error.toString());
+    }
+    console.log('Email sent: ' + info.response);
     res.status(200).json({ success: true, message: 'Email Sent!' });
   });
 });
 
-app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
