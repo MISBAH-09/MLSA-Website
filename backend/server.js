@@ -20,10 +20,15 @@ app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {
+<<<<<<< HEAD
     
     from: `"${name} (MLSA Web)" <${process.env.EMAIL_USER}>`, 
     
   
+=======
+    from: `"${name} (MLSA Web)" <${process.env.EMAIL_USER}>`, 
+    
+>>>>>>> fa6a99bdd872ac088fd3b1955d45aa373a360e06
     to: 'mlsa.cui.lhr@gmail.com',
     
     replyTo: `${name} <${email}>`, 
@@ -46,6 +51,10 @@ app.post('/send-email', (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa6a99bdd872ac088fd3b1955d45aa373a360e06
       console.error("Mail Error:", error);
       return res.status(500).send(error.toString());
     }
@@ -55,4 +64,8 @@ app.post('/send-email', (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
+<<<<<<< HEAD
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+=======
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+>>>>>>> fa6a99bdd872ac088fd3b1955d45aa373a360e06
