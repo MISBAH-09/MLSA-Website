@@ -3,25 +3,6 @@ import { Calendar, MapPin, Clock, Users } from "lucide-react";
 import Footer from "../components/footer";
 
 const events = [
-  // {
-  //   id: 1,
-  //   title: "Azure Cloud Workshop",
-  //   description: "Hands-on workshop on Microsoft Azure fundamentals.",
-  //   date: "Feb 15, 2024",
-  //   time: "10:00 AM - 2:00 PM",
-  //   venue: "CS Lab 3, COMSATS",
-  //   status: "upcoming",
-  // },
-  // {
-  //   id: 2,
-  //   title: "Hackathon 2024",
-  //   description: "48-hour hackathon to build innovative tech solutions.",
-  //   date: "Mar 1–2, 2024",
-  //   time: "9:00 AM onwards",
-  //   venue: "Main Auditorium",
-  //   status: "upcoming",
-  // },
-
   {
     id: 1,
     title: "Annual Dinner (CS Dept.)",
@@ -122,11 +103,11 @@ export default function Events() {
         </div>
 
         {/* Events Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6  ">
           {filteredEvents.map((event) => (
             <div
               key={event.id}
-              className="bg-white border-2 border-blue-900 rounded-xl p-6 hover:shadow-lg transition"
+              className="bg-white border-2 border-blue-900 rounded-xl p-6 hover:shadow-lg hover:bg-blue-200 transition"
             >
               <h2 className="text-xl font-semibold text-blue-900 mb-2">
                 {event.title}

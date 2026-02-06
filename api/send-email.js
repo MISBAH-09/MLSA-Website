@@ -17,15 +17,13 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: `"${name} (MLSA Web)" <${process.env.EMAIL_USER}>`,
-      to: 'mlsa.cui.lhr@gmail.com',
+      from: `"${name} Inquiry from Website " <${process.env.EMAIL_USER}>`,
+      to: `${process.env.EMAIL_USER}`,
       replyTo: email,
-      subject: `[MLSA Inquiry] From: ${name}`,
+      subject: `[MLSA Website Inquiry ] From: ${name}`,
       html: `
         <div style="font-family: Arial; padding: 20px">
           <h2>New Website Inquiry</h2>
-          <p><b>Name:</b> ${name}</p>
-          <p><b>Email:</b> ${email}</p>
           <p><b>Message:</b></p>
           <p>${message}</p>
         </div>

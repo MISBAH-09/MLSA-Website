@@ -85,13 +85,6 @@ export default function WhyJoinSection() {
             or LinkedIn Premium) are provided only to active students and are subject to availability.
             </p>
 
-            {/* Plain Tailwind Button */}
-            {/* <Link
-              to="/join"
-              className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              Apply Now
-            </Link> */}
           </motion.div>
 
           {/* Right Content - Benefits Cards */}
@@ -109,7 +102,7 @@ export default function WhyJoinSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group p-6 rounded-2xl bg-card border-4 border-blue-900 hover:border-primary/20 hover:shadow-lg hover:scale-150 transition-all duration-300"
+                className="group p-6 rounded-2xl bg-card border-4 border-blue-900 hover:border-primary/20 hover:shadow-lg hover:bg-blue-200 hover:scale-150 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl gradient-hero flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <benefit.icon size={24} className="text-primary-foreground" />
