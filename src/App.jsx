@@ -9,26 +9,28 @@ import Contact from "./pages/contact";
 import Join from "./pages/join";
 import Login from "./pages/login";
 import Navbar from "./components/Navbar";
-import { Routes, Route } from "react-router-dom";
+import AutoScrollToTop from "./components/ui/AutoScrollToTop";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+function App () {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/join" element={<Join />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<Index />} />
-      </Routes>
-    </>
+  <BrowserRouter>
+    <AutoScrollToTop />
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/events" element={<Events />} />
+      <Route path="/team" element={<Team />} />
+      <Route path="/resources" element={<Resources />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/join" element={<Join />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="*" element={<Index />} />
+    </Routes>
+  </BrowserRouter>
   );
-}
+};
 
-export default App
+export default App;
