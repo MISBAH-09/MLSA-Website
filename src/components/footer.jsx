@@ -1,6 +1,7 @@
 import { Instagram, Linkedin, Mail, Github, MapPin, Heart, Facebook } from 'lucide-react';
 import ContributorList from './ContributorList';
 import logo from '../images/mlsa_logo.png'; 
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const quickLinks = [
@@ -64,12 +65,19 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
+                    to={link.href}
+                    className="text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                  {/* <a
                     href={link.href}
                     className="text-white/60 hover:text-white transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </a> */}
+                 
                 </li>
               ))}
             </ul>
