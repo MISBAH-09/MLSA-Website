@@ -25,3 +25,8 @@ dist-ssr
 *.sw?
 .env
 # src/services/
+
+# Claude Code AI development configuration (personal, not for repo)
+.claude/
+# Claude Code temporary working directories
+tmpclaude-*
