@@ -7,11 +7,11 @@ It serves as a central hub for showcasing events, team members, resources, and c
 
 ## 🚀 Features
 
-* ⚡ Fast and responsive UI built with **React + Vite**
-* 🎨 Styled with **Tailwind CSS** for a modern look
-* 🌐 Serverless API integration via the `/api` directory
-* 📦 Optimized production builds
-* 🚀 Deployed seamlessly on **Vercel**
+*  Fast and responsive UI built with **React + Vite**
+*  Styled with **Tailwind CSS** for a modern look
+*  Serverless API integration via the `/api` directory
+*  Optimized production builds
+*  Deployed seamlessly on **Vercel**
 
 ---
 
