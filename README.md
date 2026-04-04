@@ -1,6 +1,6 @@
 # 🌐 MLSA Website
 
-A modern and responsive website built for the **Microsoft Learn Student Ambassadors (MLSA)** community.
+A modern and responsive offical website built for the **Microsoft Learn Student Ambassadors (MLSA)** @COMSATS LAHORE community.
 It serves as a central hub for showcasing events, team members, resources, and community activities for students passionate about Microsoft technologies.
 
 ---
