@@ -18,9 +18,9 @@ It serves as a central hub for showcasing events, team members, resources, and c
 ## 🛠️ Tech Stack
 
 * HTML5
-* CSS3
 * JavaScript
-* Bootstrap
+* Talwind CSS
+* React JS
 
 ---
 
