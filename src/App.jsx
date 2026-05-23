@@ -8,6 +8,7 @@ import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 import Join from "./pages/join";
 import Login from "./pages/login";
+import Activities from "./pages/activities";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/join" element={<Join />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/activities" element={<Activities />} />
         <Route path="*" element={<Index />} />
       </Routes>
     </>
